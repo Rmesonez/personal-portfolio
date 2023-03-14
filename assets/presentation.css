@@ -1,0 +1,414 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    background-color:#010203;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 60%;
+    margin: 40px auto;
+    /* position: absolute; */
+}
+
+.img-container{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/foto.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.container-faq {
+    box-shadow: 0 7px 8px -3px grey;
+    padding: 20px 20px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    background-color: white;
+    position: relative;
+}
+.glow::before, .glow::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -2pxpx;
+    background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66,
+     #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 3px);
+    z-index: -1;
+    border-radius: 15px;
+    animation: glow 20s linear infinite;
+}
+
+@keyframes glow{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 140% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.glow::after{
+    filter: blur(40px);
+ 
+}
+
+.container-faq .title-faq {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-variant: small-caps;
+    background-color: #111;
+    padding:10px 20px;
+    border-radius: 15px;
+    color: darkblue;
+}
+
+.title{
+    animation: neonGlow 2s infinite alternate ease-in-out;
+}
+
+@keyframes neonGlow {
+    0%{
+        text-shadow: 0 0 10px rgba(255, 255, 255 , .8),
+                    0 0 20px rgba(255, 255, 255 , .8),
+                    0 0 22px rgba(255, 255, 255 , .8),
+                    0 0 40px rgba(66, 220, 219, .8),
+                    0 0 60px rgba(66, 220, 219, .8),
+                    0 0 80px rgba(66, 220, 219, .5),
+                    0 0 140px rgba(66, 220, 219, .5),
+                    0 0 200px rgba(66, 220, 219, .5);
+    }
+    100%{
+        text-shadow: 0 0 2px rgba(255, 255, 255 , .8),
+                        0 0 8px rgba(255, 255, 255 , .8),
+                        0 0 10px rgba(255, 255, 255 , .8),
+                        0 0 20px rgba(66, 220, 219, .8),
+                        0 0 30px rgba(66, 220, 219, .8),
+                        0 0 40px rgba(66, 220, 219, .5),
+                        0 0 50px rgba(66, 220, 219, .5),
+                        0 0 80px rgba(66, 220, 219, .5);
+    }
+}
+
+.container-faq .item-faq {
+    box-shadow: 0 7px 8px -3px grey;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.container-faq .item-faq .question {
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(43, 51, 122, .2);
+    padding: 10px 20px;
+    transition: .4s;
+    border-radius: 10px 10px 0 0;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1.5;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.info h3{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #0b1a31;
+}
+
+.info ul{
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.info ul li{
+    margin: 10px 0;
+}
+
+.info ul li strong{
+    color: #000a1a;
+    font-weight: 700;
+}
+
+.manejos{
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+
+}
+
+button{
+    background-color: #0b1a31;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .4s;
+    align-self: flex-end;
+}
+button:hover{
+    background-color: #15325e;
+    color: white;
+}
+
+
+.answer {
+    position: relative;
+    height: 0;
+    padding: 0 40px;
+    overflow: auto;
+    transition: .4s;
+}
+.answer-list{
+    padding: 10px 0;
+}
+.answer-list ul {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #0b1a31;
+    padding: 10px 20px;
+    background-color: #0b1a31;
+    border-radius: 15px;
+    color: white;
+    margin: 10px 0;
+    list-style: none;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    line-height: 1.5;
+    gap: 60px;
+}
+
+.answer-list ul:hover{
+    background-color: #15325e;
+    color: white;
+
+    transition: .4s;
+}
+.answer-list ul li{
+    margin: 20px 0;;
+}
+
+
+.answer-list a{
+    padding: 7px 15px;
+    border-radius: 10px;
+    background-color: #0b1a31;
+    outline: 1px solid white;
+    font-weight: 700;
+    transition: .4s;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.answer-list ul li a:hover{
+    background-color: white;
+    color: #0b1a31;
+    transition: .4s;
+}
+
+.answer-list ul a{
+    color: white;
+    text-decoration: none;
+}
+
+.answer-list ul a:visited{
+    color: white;
+}
+
+.author {
+    display: flex;
+    justify-content: center;
+    FONT-VARIANT: JIS04;
+    margin-top: 3%;
+    gap: 7px;
+    font-size: 25px;
+    color: white;
+}
+p.author a {
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(0, 235, 129);
+    font-size: 25px;
+}
+footer{
+    animation: scale 3s linear infinite;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+
+
+
+@media screen and (min-width:320px) and (max-width: 560px){
+    body{
+        background-color:#0b1a31;
+    }
+    .glow::after, .glow::before{
+        display: none;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .container-faq .item-faq{
+        box-shadow: none;
+        width: 320px;
+        margin: 0 auto;
+    }
+    .question{
+        width: 320px;
+        margin: 0 auto;
+    
+    }
+    .container-faq .item-faq .question .title {
+        margin-bottom: 10px;
+    }
+    .info{
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+    .manejos-item{
+        font-size: 1rem;
+    }
+    .answer-list ul a{
+        font-size: .7rem;
+        margin: 0 0;
+        padding: 5px 10px;
+    }
+    .answer-list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3px;
+        font-size: 0.7rem;
+
+    }
+}
+
+@media screen and (min-width: 561px) and (max-width: 768px){
+    .container{
+        max-width: 100%;
+    }
+    .container-faq .item-faq{
+        box-shadow: none;
+    }
+    .question{
+        width: 330px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .img-container{
+        height: 350px;
+    }
+    img{
+        object-fit: contain;
+    }
+    .container-faq .item-faq .question .title {
+        margin-bottom: 10px;
+    }
+    .info{
+        padding-left: 0px;
+        padding-right: 20px;
+    
+    }
+    .manejos-item{
+        font-size: 1rem;
+    }
+    .answer-list ul a{
+        font-size: .7rem;
+    }
+    .answer-list ul{
+        gap: 5px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .container{
+        max-width: 100%;
+    }
+    .container-faq .item-faq{
+        box-shadow: none;
+    }
+    .question{
+        width: 330px;
+        margin: 0 auto;
+        flex-direction: column;
+
+    }
+    .img-container{
+        height: 350px;
+    }
+    img{
+        object-fit: contain;
+    }
+    .container-faq .item-faq .question .title {
+        margin-bottom: 10px;
+    }
+    .info{
+        padding-left: 0px;
+        padding-right: 20px;
+    
+    }
+    .manejos-item{
+        font-size: 1rem;
+    }
+    .answer-list ul li a{
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+    .answer-list ul{
+        gap: 5px;
+        text-align: center;
+    }
+}

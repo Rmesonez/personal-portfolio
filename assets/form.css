@@ -8,6 +8,7 @@
     --main-color: ghostwhite;
     --sun-color: rgb(122, 118, 59);
     --moon-color: rgb(0, 26, 63);
+    --cv:#15325e;
 }
 *{
     margin: 0;
@@ -281,14 +282,14 @@ textarea{
     FONT-VARIANT: JIS04;
     gap: 7px;
     font-size: 25px;
-    color: white;
+    color: #15325e;
   
   
 }
 p.author a {
     text-decoration: none;
     font-weight: 700;
-    color: rgb(0, 235, 129);
+    color: var(--cv);
     font-size: 25px;
 }
 footer{
@@ -346,6 +347,7 @@ footer{
         --main-color: #2d3748;
         --sun-color: #ffd700;
         --moon-color: lightsteelblue;
+        --cv:rgb(0, 235, 129);
         /*--bg-color: #0d1b1e;
         --main-text-color: aliceblue;
         --accent-color: purple;
@@ -361,6 +363,7 @@ footer{
         --main-color: ghostwhite;
         --sun-color: rgb(122, 118, 59);
         --moon-color: rgb(0, 26, 63);
+        --cv:#15325e;
     }
 
     .nav-link{

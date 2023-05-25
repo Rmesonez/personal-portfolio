@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   margin: 100px 0;
   display: flex;
@@ -21,8 +21,8 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height:100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
 }
 .presentation-title{
@@ -83,6 +83,10 @@ video {
   position: absolute;
   width: 100%;
   z-index: -1;
+}
+
+.wrapper img{
+  border-radius: 15px;
 }
 
 .card:hover .wrapper {

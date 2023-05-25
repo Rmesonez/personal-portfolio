@@ -5,38 +5,37 @@
     user-select: none;
 }
 body{
-    background-color:#010203;
+    background: linear-gradient( to right, rgb(105, 105, 233), #fff, rgb(105, 105, 233));
     font-family: 'Roboto', sans-serif;
 }
 
 .container {
     max-width: 60%;
-    margin: 40px auto;
-    /* position: absolute; */
+    margin: 100px auto;
 }
 
 .img-container{
-    width: 100%;
-    height: 500px;
-    background-image: url(../images/foto.png);
+    width: 200px;
+    height: 300px;
+    background-image: url(../images/yo.JPG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: 10%;
 }
 
 img{
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-
+    max-width: 100%;
+    height: 100%;
 }
 
 .container-faq {
     box-shadow: 0 7px 8px -3px grey;
     padding: 20px 20px;
-    width: 90%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +45,7 @@ img{
     background-color: white;
     position: relative;
 }
-.glow::before, .glow::after {
+/* .glow::before, .glow::after {
     content: "";
     position: absolute;
     top: 0px;
@@ -59,9 +58,9 @@ img{
     z-index: -1;
     border-radius: 15px;
     animation: glow 20s linear infinite;
-}
+} */
 
-@keyframes glow{
+/* @keyframes glow{
     0%{
         background-position: 0 0;
     }
@@ -71,12 +70,12 @@ img{
     100%{
         background-position: 0 0;
     }
-}
+} */
 
-.glow::after{
+/* .glow::after{
     filter: blur(40px);
  
-}
+} */
 
 .container-faq .title-faq {
     text-align: center;
@@ -84,17 +83,17 @@ img{
     margin-bottom: 10px;
     font-weight: 700;
     font-variant: small-caps;
-    background-color: #111;
+    background-color: rgb(145, 150, 223);
     padding:10px 20px;
     border-radius: 15px;
-    color: darkblue;
+    color: #15325e;
 }
 
 .title{
     animation: neonGlow 2s infinite alternate ease-in-out;
 }
 
-@keyframes neonGlow {
+/* @keyframes neonGlow {
     0%{
         text-shadow: 0 0 10px rgba(255, 255, 255 , .8),
                     0 0 20px rgba(255, 255, 255 , .8),
@@ -115,7 +114,7 @@ img{
                         0 0 50px rgba(66, 220, 219, .5),
                         0 0 80px rgba(66, 220, 219, .5);
     }
-}
+} */
 
 .container-faq .item-faq {
     box-shadow: 0 7px 8px -3px grey;
@@ -179,7 +178,7 @@ button{
     background-color: #0b1a31;
     color: white;
     border: none;
-    padding: 10px 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 700;
@@ -265,12 +264,12 @@ button:hover{
     margin-top: 3%;
     gap: 7px;
     font-size: 25px;
-    color: white;
+    color: #0b1a31;
 }
 p.author a {
     text-decoration: none;
     font-weight: 700;
-    color: rgb(0, 235, 129);
+    color: #0b1a31;
     font-size: 25px;
 }
 footer{
